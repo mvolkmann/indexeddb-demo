@@ -119,12 +119,12 @@ export default class IDBEasy {
       };
 
       request.onerror = event => {
-        console.error('failed to open database');
-        dogs = new Dogs(new IDBEasy(db));
+        console.error(`failed to open database ${dbName}`);
         reject(event);
       };
 
       request.onupgradeneeded = async event => {
+        console.log('idb-easy.js onupgradeneeded: entered');
         const db = request.result;
         upgrade(db, event);
       };
