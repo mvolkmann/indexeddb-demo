@@ -1,0 +1,33 @@
+body {
+  background-color: cornflowerblue;
+  font-family: sans-serif;
+}
+
+button {
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+h1 {
+  color: orange;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  background-color: white;
+}
+
+th {
+  background-color: orange;
+}
+
+td,
+th {
+  border: 1px solid black;
+  padding: 0.5rem;
+}
