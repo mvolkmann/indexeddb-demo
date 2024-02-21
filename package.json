@@ -1,0 +1,16 @@
+{
+  "name": "indexeddb-demo",
+  "type": "module",
+  "scripts": {
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "js2htmlstr": "^1.0.4"
+  }
+}

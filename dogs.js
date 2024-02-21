@@ -1,9 +1,11 @@
-import {button, div, p, table, td, th, tr} from './js2html.js';
+import elements from './js2htmlstr.js';
+const {button, div, p, table, td, th, tr} = elements;
+
 const storeName = 'dogs';
 
 function dogToTableRow(dog) {
   const {breed, id, name} = dog;
-  return tr([
+  return tr(
     td(id),
     td(name),
     td(breed),
@@ -17,7 +19,7 @@ function dogToTableRow(dog) {
         '🗑'
       )
     )
-  ]);
+  );
 }
 
 export default class Dogs {
@@ -28,6 +30,7 @@ export default class Dogs {
   async initialize() {
     const ie = this.idbEasy;
     const count = await ie.getRecordCount(storeName);
+    console.log('dogs.js initialize: count =', count);
     if (count === 0) {
       // Unless the database is deleted and recreated,
       // these records will be recreated with new key values.
